@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  --bg-velvet: #070709;
+  --t1-red: #e4002b;
+  --t1-gold: #e5b84b;
+  --winter-ash: #0f1722;
+  --dusk-crimson: #240814;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@theme inline {
+  --color-background: var(--bg-velvet);
+  --color-foreground: #f2efe9;
+  --font-serif: var(--font-serif);
+  --font-display: var(--font-display);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+html,
+body {
+  background-color: var(--bg-velvet);
+  color: #f2efe9;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: clip;
+  max-width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #070709;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(228, 0, 43, 0.45);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e5b84b;
+}
+
+/* Film grain overlay (Script.md: pointer-events: none, opacity: 0.04) */
+.film-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+/* 4-corner vignette */
+.vignette-overlay {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+  pointer-events: none;
+}
+
+/* T1 Red & Gold glows */
+.t1-glow {
+  filter: drop-shadow(0 0 18px rgba(228, 0, 43, 0.58));
+}
+
+.gold-glow {
+  filter: drop-shadow(0 0 14px rgba(229, 184, 75, 0.65));
+}
+
+/* MotionSites Liquid-Glass Surface with XOR Gradient Hairline Rim */
+.liquid-glass {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  background: rgba(12, 12, 16, 0.56);
+  background-blend-mode: luminosity;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.12);
+}
+
+.liquid-glass::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.2px;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.42) 0%,
+    rgba(255, 255, 255, 0.14) 22%,
+    rgba(255, 255, 255, 0) 45%,
+    rgba(255, 255, 255, 0) 60%,
+    rgba(255, 255, 255, 0.14) 80%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+}
+
+/* Editorial Drop-Cap for Opening Paragraphs */
+.chapter-dropcap::first-letter {
+  font-family: var(--font-serif), serif;
+  font-style: italic;
+  font-size: 2.75rem;
+  line-height: 0.88;
+  float: left;
+  margin-right: 0.45rem;
+  margin-top: 0.2rem;
+  color: #e5b84b;
+}
+
+/* Persistent Stage Layer Transition */
+.stage-layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 750ms var(--ease-out-expo),
+    transform 900ms var(--ease-out-expo);
+}
+
+/* Subtle CRT scanlines for Scene 0 */
+.crt-scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(110, 231, 183, 0.06) 0px,
+    rgba(110, 231, 183, 0.06) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+/* Subtle museum photo frame */
+.archival-plate {
+  position: relative;
+  border: 1px solid rgba(242, 239, 233, 0.14);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.72);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stage-layer {
+    transition: none;
+  }
+}

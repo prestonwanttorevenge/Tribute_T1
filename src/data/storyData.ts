@@ -1,0 +1,265 @@
+export interface StoryScene {
+  index: number;
+  id: string;
+  eraTag: string;
+  years: string;
+  title: string;
+  unlocksStarsUpTo: number; // 0..6 cumulative stars unlocked upon reaching/passing this scene
+  bgHex: string;
+  backdropImage: string;
+  paragraphs: string[];
+}
+
+export const STAR_MILESTONES = [
+  { star: 1, year: "2013", label: "Mùa 3 · LA" },
+  { star: 2, year: "2015", label: "Berlin" },
+  { star: 3, year: "2016", label: "Back-to-Back" },
+  { star: 4, year: "2023", label: "Seoul" },
+  { star: 5, year: "2024", label: "London" },
+  { star: 6, year: "2025", label: "Three-Peat" },
+];
+
+export const STORY_SCENES: StoryScene[] = [
+  {
+    index: 0,
+    id: "scene-0",
+    eraTag: "MỞ ĐẦU",
+    years: "2003 – 2012",
+    title: "MỞ ĐẦU: NGỌN LỬA KHỞI NGUỒN TỪ NHỮNG CĂN PHÒNG NHỎ SEOUL (2003 – 2012)",
+    unlocksStarsUpTo: 0,
+    bgHex: "#070709",
+    backdropImage: "images/t1/skt-2013-team.jpg",
+    paragraphs: [
+      "Mọi đế chế vĩ đại trên thế gian đều bắt đầu từ một hạt mầm nhỏ bé, đôi khi chỉ là một căn phòng chật hẹp nồng mùi mì gói, tiếng gõ bàn phím lạch cạch xuyên đêm và ánh sáng xanh nhạt hắt ra từ những chiếc màn hình dày cộp.",
+      "Vào những năm đầu thập niên 2000, tại Hàn Quốc, khái niệm \"thể thao điện tử\" vẫn còn là một giấc mơ xa xỉ trong mắt phần lớn người lớn. Thế nhưng, trong những quán net (PC bang) sáng đèn thâu đêm suốt sáng ở Seoul, một cuộc cách mạng âm thầm đang nhen nhóm. Năm 2003, một chàng trai mang biệt danh BoxeR — Lim Yo-hwan, người sau này được tôn xưng là \"Hoàng đế Terran\" của tựa game StarCraft — đã tự tay lập nên một đội tuyển mang tên 4Union. Không nhà tài trợ lớn, không cơ sở vật chất hào nhoáng, họ sống bằng niềm tin thuần khiết rằng trò chơi điện tử có thể trở thành một môn nghệ thuật đỉnh cao.",
+      "Đến năm 2004, tập đoàn viễn thông khổng lồ SK Telecom nhìn thấy ngọn lửa ấy. Họ bước tới, đặt lên vai những chàng trai trẻ tấm áo khoác mang sắc đỏ rực rỡ cùng cái tên định mệnh: SK Telecom T1.",
+      "Trong suốt gần một thập kỷ sau đó, cái tên SKT T1 trở thành biểu tượng của sự thống trị trong StarCraft. Sắc đỏ ấy mang theo kỷ luật thép, sự kiêu hãnh của người Hàn Quốc và khát khao chiến thắng đến tận cùng. Nhưng bánh xe lịch sử không bao giờ đứng yên. Khi kỷ nguyên của StarCraft dần nhường chỗ cho một chiến trường mới mang tên Liên Minh Huyền Thoại (League of Legends), SK Telecom hiểu rằng họ phải bước vào cuộc chơi này — không phải để dạo chơi, mà để viết lại lịch sử.",
+      "Cuối năm 2012, SKT thành lập hai đội tuyển Liên Minh Huyền Thoại: đội 1 quy tụ những ngôi sao dày dạn kinh nghiệm quanh đường trên Reapered, và đội 2 — một tập hợp những tân binh vô danh được tuyển chọn từ bậc xếp hạng đơn.",
+      "Trong đội hình tân binh ấy có một cậu thiếu niên 16 tuổi gầy gò, đeo cặp kính cận dày, ít nói đến mức gần như vô hình khi rời khỏi chiếc ghế thi đấu. Trên máy chủ Hàn Quốc, cậu chơi dưới cái tên GoJeonPa — một kẻ quái kiệt không thèm dùng trang phục tướng, đánh bại mọi cao thủ chuyên nghiệp bằng những pha xử lý nhanh đến mức mắt thường khó theo kịp. Khi bước lên sân khấu chuyên nghiệp, cậu chọn cho mình một cái tên mới: Faker.",
+      "Không một ai trên thế giới lúc bấy giờ biết rằng, khoảnh khắc cậu bé 16 tuổi ấy khoác lên mình chiếc áo đỏ đen của SKT T1, một vương triều kéo dài hơn một thập kỷ đã chính thức được khai sinh.",
+    ],
+  },
+  {
+    index: 1,
+    id: "scene-1",
+    eraTag: "CHƯƠNG I",
+    years: "2013",
+    title: "CHƯƠNG I: TIẾNG GẦM CỦA QUỶ VƯƠNG TRẺ TUỔI (2013)",
+    unlocksStarsUpTo: 1,
+    bgHex: "#070709",
+    backdropImage: "images/t1/faker-2013.jpg",
+    paragraphs: [
+      "Mùa xuân năm 2013, giải đấu OGN Champions Spring tại Hàn Quốc chứng kiến trận ra mắt của SKT T1 #2. Đối thủ của họ là CJ Entus Blaze, một gã khổng lồ thực sự với người đi đường giữa lừng danh Ambition — lúc bấy giờ đang là một trong những tuyển thủ xuất sắc nhất xứ sở kim chi.",
+      "Phút thứ 6 của ván đấu đầu tiên, Ambition điều khiển Kha'Zix đứng ngay dưới trụ bảo vệ đường giữa của mình, bình thản nâng cấp kỹ năng. Anh ta tin rằng mình tuyệt đối an toàn. Nhưng từ trong bóng tối, con báo Nidalee của tân binh Faker lao tới như một tia chớp. Một mũi lao xé gió, một cú vồ chuẩn xác đến từng milimet, và màn hình hiện lên dòng chữ: Chiến Công Đầu.",
+      "Cả nhà thi đấu nín lặng trong một giây, rồi vỡ òa. Tân binh 16 tuổi vừa hạ gục nhà vô địch ngay trong trận đầu tiên của sự nghiệp.",
+      "Nhưng đó mới chỉ là khúc dạo đầu. Mùa hè năm 2013, SKT T1 bước vào trận chung kết OGN Summer gặp KT Rolster Bullets — đối thủ truyền kiếp cùng ngành viễn thông, mở ra trang sử đầu tiên của cuộc \"Đại chiến Viễn thông\" (Telecom War). Bị dẫn trước 0-2, SKT T1 lội ngược dòng ngoạn mục để đưa trận đấu tới ván 5 quyết định — nơi luật chọn ẩn cho phép hai đội dùng những vị tướng giống hệt nhau.",
+      "Và khoảnh khắc bất tử nhất lịch sử Liên Minh Huyền Thoại đã ra đời. Hai con Zed của Faker và Ryu lao vào nhau ở đường giữa. Faker chỉ còn chưa đầy một phần tư thanh máu, trong khi Ryu gần như đầy máu. Dưới ánh đèn sân khấu rực lửa, những phân thân bóng tối đan xen chóng mặt. Tốc Biến, Khăn Giải Thuật, phi tiêu, chém xoáy — tất cả diễn ra trong chưa đầy ba giây. Khi làn khói tan đi, Zed của Ryu gục xuống, còn Faker bước đi với vệt máu mỏng manh như sợi chỉ. Bình luận viên DoA gào lên khản giọng: \"FAKER! WHAT WAS THAT?!\" (Faker! Cái quái gì vừa xảy ra vậy?!).",
+      "Từ giây phút ấy, thế giới gọi cậu là Quỷ Vương Bất Tử (The Unkillable Demon King).",
+      "Tháng 10 năm 2013, SKT T1 tiến tới Chung Kết Thế Giới mùa 3 tại nhà thi đấu Staples Center, Los Angeles. Năm chàng trai trẻ — Impact vững chãi ở đường trên, Bengi thầm lặng kiểm soát từng bụi cỏ trong rừng, Faker hủy diệt mọi đối thủ ở đường giữa, cùng cặp đôi đường dưới bùng nổ Piglet và PoohManDu — đã càn quét giải đấu như một cơn bão đỏ. Trong trận chung kết trước hàng vạn khán giả Mỹ, họ nghiền nát Royal Club của Trung Quốc với tỷ số 3-0 gọn gàng.",
+      "Chiếc cúp Summoner đầu tiên được nâng cao trên bầu trời Los Angeles. Ngôi sao đầu tiên được thêu lên ngực áo SKT T1. Vương triều đỏ chính thức bước lên ngai vàng thế giới.",
+    ],
+  },
+  {
+    index: 2,
+    id: "scene-2",
+    eraTag: "CHƯƠNG II",
+    years: "2014 – 2016",
+    title: "CHƯƠNG II: BÓNG TỐI DƯỚI CHÂN NGAI VÀNG VÀ ĐỈNH CAO BẤT TỬ (2014 – 2016)",
+    unlocksStarsUpTo: 3,
+    bgHex: "#070709",
+    backdropImage: "images/t1/skt-2015-trophy.jpg",
+    paragraphs: [
+      "Thế nhưng, đỉnh cao nào cũng có sườn dốc. Năm 2014 giáng xuống SKT T1 một gáo nước lạnh buốt giá. Sau chức vô địch mùa đông bất bại, đội hình huyền thoại bắt đầu rạn nứt. PoohManDu gặp vấn đề sức khỏe phải tạm nghỉ, Piglet sa sút phong độ, và các đối thủ tại Hàn Quốc — đặc biệt là hai anh em nhà Samsung White và Samsung Blue — trỗi dậy mạnh mẽ.",
+      "Mùa thu năm 2014, Chung Kết Thế Giới lần đầu tiên được tổ chức ngay tại quê nhà Seoul, Hàn Quốc. Nhưng trên sân khấu ấy, nhà đương kim vô địch SKT T1 lại vắng bóng. Họ thua đau đớn ở vòng loại khu vực, đành ngậm ngùi ngồi nhà nhìn Samsung White nâng cao chiếc cúp ngay trên mảnh đất của mình. Đó là bài học đầu tiên của vương triều đỏ: trên đỉnh vinh quang, chỉ một khoảnh khắc chững lại cũng đồng nghĩa với sự sụp đổ.",
+      "Cuối năm 2014, một cuộc đại di cư (Korean Exodus) làm rung chuyển Hàn Quốc khi hàng loạt ngôi sao sang Trung Quốc thi đấu. Impact, Piglet và PoohManDu lần lượt rời đi. Nhiều người tin rằng triều đại của SKT đã chấm dứt. Nhưng họ đã lầm.",
+      "Năm 2015, SKT hợp nhất hai đội hình và tái sinh từ đống tro tàn. Bên cạnh Faker và người bạn tri kỷ Bengi, những mảnh ghép hoàn hảo xuất hiện: đội trưởng MaRin đầy bản lĩnh ở đường trên, Easyhoon điềm tĩnh chia lửa ở đường giữa, cùng bộ đôi đường dưới lạnh lùng Bang và Wolf. Dưới sự dẫn dắt của vị huấn luyện viên thiên tài kkOma, cỗ máy chiến tranh SKT T1 năm 2015 đạt đến sự hoàn mỹ đáng sợ.",
+      "Tại Chung Kết Thế Giới 2015 ở Berlin, Đức, SKT T1 bước đi như những vị thần. Họ toàn thắng suốt từ vòng bảng đến bán kết mà không để thua bất kỳ một ván đấu nào. Chỉ đến trận chung kết gặp KOO Tigers, họ mới đánh rơi một ván duy nhất trước khi khép lại loạt trận với tỷ số 3-1. Hai lần vô địch thế giới. Ngôi sao thứ hai tỏa sáng trên ngực áo đỏ.",
+      "Bước sang năm 2016, thử thách còn khắc nghiệt hơn khi MaRin và Easyhoon ra đi, nhường chỗ cho Duke và tài năng trẻ Blank. Dù gặp nhiều chệch choạc ở giải quốc nội, bản lĩnh của nhà vua vẫn lên tiếng đúng lúc. Họ vô địch MSI 2016 tại Thượng Hải — hoàn tất bộ sưu tập danh hiệu lớn (Golden Road) kéo dài qua hai mùa giải — rồi hành quân trở lại Staples Center, Los Angeles cho Chung Kết Thế Giới 2016.",
+      "Trận chung kết năm ấy trước Samsung Galaxy là một bản giao hưởng của lòng quả cảm. SKT dẫn trước 2-0, tưởng chừng chiến thắng đã nằm gọn trong tay, nhưng Samsung vùng lên gỡ hòa 2-2 đầy ngoạn mục. Giữa lằn ranh sinh tử của ván 5 quyết định, huấn luyện viên kkOma vì quá căng thẳng đã quên cấm đi vị tướng Nidalee cực mạnh ở phiên bản đó, buộc người đi rừng kỳ cựu Bengi phải chọn vị tướng mà anh chưa từng một lần sử dụng trong suốt sự nghiệp thi đấu chuyên nghiệp của mình.",
+      "Nhưng Bengi — \"cánh tay phải của Chúa\" — đã chơi một trận để đời. Anh kiểm soát từng bước di chuyển của đối thủ, che chắn cho Faker và Bang tỏa sáng trong những pha giao tranh nghẹt thở. Khi nhà chính của Samsung Galaxy nổ tung ở ván 5, cả khán phòng Staples Center rung chuyển. SKT T1 trở thành đội tuyển đầu tiên trong lịch sử bảo vệ thành công ngôi vương thế giới, khắc lên mình ngôi sao thứ ba vĩ đại.",
+    ],
+  },
+  {
+    index: 3,
+    id: "scene-3",
+    eraTag: "CHƯƠNG III",
+    years: "2017 – 2021",
+    title: "CHƯƠNG III: GIỌT NƯỚC MẮT Ở TỔ CHIM VÀ MÙA ĐÔNG DÀI ĐẰNG ĐẴNG (2017 – 2021)",
+    unlocksStarsUpTo: 3,
+    bgHex: "#0F1722",
+    backdropImage: "images/t1/birds-nest-2017.jpg",
+    paragraphs: [
+      "Nếu lịch sử của SKT T1 là một bộ phim điện ảnh, thì năm 2017 chính là phân cảnh bi tráng và đau lòng nhất.",
+      "Năm ấy, đội hình của SKT có sự xáo trộn lớn ở đường trên và đi rừng với Huni và Peanut. Dù vẫn giành chức vô địch LCK Mùa Xuân và MSI 2017, những vết nứt bắt đầu lộ rõ vào mùa hè. Đến Chung Kết Thế Giới 2017 tại Trung Quốc, SKT T1 không còn là cỗ máy nghiền nát mọi đối thủ như trước. Họ lê bước qua từng vòng đấu bằng thứ bản lĩnh gồng gánh đến kiệt quệ của một mình Faker.",
+      "Ở trận bán kết trước Royal Never Give Up, giữa bầu không khí cuồng nhiệt của khán giả chủ nhà Thượng Hải, Faker đã làm một điều không tưởng: chọn Galio 5 ván liên tiếp, có mặt ở mọi điểm nóng trên bản đồ để kéo cả tập thể vượt qua cửa tử với tỷ số 3-2.",
+      "Nhưng phép màu không thể kéo dài mãi. Ngày 4 tháng 11 năm 2017, tại sân vận động Tổ Chim (Beijing National Stadium) trước hơn 40.000 khán giả, SKT T1 tái ngộ Samsung Galaxy trong trận chung kết. Lần này, không có cuộc lội ngược dòng nào cả. Samsung Galaxy lạnh lùng và chuẩn xác, quật ngã đế chế đỏ với tỷ số 3-0.",
+      "Khoảnh khắc nhà chính vỡ tan, ống kính máy quay hướng thẳng vào buồng thi đấu của SKT. Faker gục mặt xuống bàn, đôi vai run lên bần bật, những giọt nước mắt nóng hổi rơi xuống bàn phím. Lần đầu tiên kể từ khi bước chân vào thế giới chuyên nghiệp, vị thần bất tử của Liên Minh Huyền Thoại khóc trước hàng triệu người xem. Khi đứng dậy cúi chào khán giả, cậu vẫn ngoái đầu nhìn lại chiếc cúp Summoner lấp lánh sau lưng — ánh mắt đầy tiếc nuối và bất lực.",
+      "Cú ngã ở Tổ Chim mở đầu cho một mùa đông kéo dài suốt năm năm đằng đẵng.",
+      "Năm 2018 là đáy sâu tăm tối nhất của vương triều. Bang và Wolf sa sút, các tân binh đường trên và đi rừng không thể khỏa lấp khoảng trống. SKT T1 lần đầu tiên lỡ hẹn với cả hai giải đấu quốc tế lớn, thậm chí phải ngồi nhìn những đội tuyển khác tranh tài từ ghế khán giả.",
+      "Năm 2019 đánh dấu một bước ngoặt lịch sử về thương hiệu: SK Telecom bắt tay với tập đoàn truyền thông Mỹ Comcast Spectacor, chính thức đổi tên đội tuyển từ SKT T1 thành T1. Họ xây dựng một \"Đội hình trong mơ\" (Dream Team) quanh Faker với Khan, Clid, Teddy và Mata. T1 thống trị giải quốc nội với hai chức vô địch LCK liên tiếp, nhưng trên đấu trường quốc tế, một thế lực mới từ châu Âu mang tên G2 Esports đã hai lần chặn đứng bước tiến của họ ở bán kết MSI và Chung Kết Thế Giới.",
+      "Bước sang giai đoạn 2020 – 2021, thế giới chìm trong đại dịch, và T1 chìm trong cuộc khủng hoảng nhân sự. Ban huấn luyện xoay tua đội hình 10 người liên tục qua từng tuần đấu, khiến cả những người hâm mộ trung thành nhất cũng cảm thấy hoang mang. Năm 2021, khi bộ khung trẻ tuổi dần định hình, T1 tiến tới bán kết Chung Kết Thế Giới tại Iceland nhưng lại gục ngã 2-3 đầy tiếc nuối trước DWG KIA.",
+      "Năm năm trôi qua không một chiếc cúp thế giới. Faker không còn là cậu thiếu niên 16 tuổi năm nào; anh đã bước sang tuổi 25 — độ tuổi mà nhiều đồng nghiệp cùng trang lứa đã giải nghệ hoặc chuyển sang làm huấn luyện viên. Những lời xì xào bắt đầu vang lên khắp nơi: \"Thời của Faker hết rồi. Vương triều T1 đã thực sự lụi tàn.\"",
+    ],
+  },
+  {
+    index: 4,
+    id: "scene-4",
+    eraTag: "CHƯƠNG IV",
+    years: "2022",
+    title: "CHƯƠNG IV: ZOFGK – LỜI THỀ CỦA NHỮNG ĐỨA TRẺ NHÀ T1 (2022)",
+    unlocksStarsUpTo: 3,
+    bgHex: "#070709",
+    backdropImage: "images/t1/zofgk-2022.jpg",
+    paragraphs: [
+      "Giữa những hoài nghi bủa vây, từ lò đào tạo trẻ của chính T1, bốn mầm non kiệt xuất đã lớn lên và bước ra ánh sáng để đứng cạnh người đội trưởng vĩ đại của họ.",
+      "Đó là Zeus — cậu nhóc đường trên sinh năm 2004 mang sức mạnh sấm sét; Oner — người đi rừng đầy cơ bắp và lòng quả cảm; Gumayusi — xạ thủ kiêu hãnh mang dòng máu chiến binh với tuyên ngôn \"Tôi chính là xạ thủ giỏi nhất thế giới\"; và Keria — hỗ trợ thiên tài được mệnh danh là \"Quái vật nhỏ\" với bộ não chiến thuật siêu việt.",
+      "Năm con người — Zeus, Oner, Faker, Gumayusi, Keria — tạo thành đội hình ZOFGK huyền thoại.",
+      "Mùa xuân năm 2022, năm chàng trai ấy tạo nên một kỳ tích vô tiền khoáng hậu trong lịch sử LCK: toàn thắng cả 18 trận vòng bảng và lên ngôi vô địch với thành tích bất bại 20-0. Cả thế giới ngỡ ngàng trước lối chơi tấn công rực lửa, không khoan nhượng của T1.",
+      "Thế nhưng, số phận vẫn muốn thử thách lòng kiên nhẫn của họ thêm một lần nữa. Tại chung kết MSI 2022 ở Busan, T1 thua sát nút 2-3 trước Royal Never Give Up. Đến chung kết LCK Mùa Hè, họ lại gục ngã trước đại kình địch Gen.G. Hai chiếc huy chương bạc liên tiếp đè nặng lên đôi vai của những chàng trai đôi mươi.",
+      "Mùa thu năm 2022, T1 tiến đến Chung Kết Thế Giới tại Mỹ và thẳng tiến vào trận chung kết ở nhà thi đấu Chase Center, San Francisco. Đối thủ của họ là DRX — đội tuyển hạt giống số 4 của Hàn Quốc được dẫn dắt bởi Deft, người bạn học cùng trường trung học Mapo với Faker năm xưa.",
+      "Đó là một trong những trận chung kết kịch tính và đẫm nước mắt nhất lịch sử. Hai đội rượt đuổi từng ván đấu, từng mục tiêu lớn, đến tận ván thứ 5 quyết định. Khi DRX phá hủy nhà chính của T1 và hoàn tất câu chuyện cổ tích \"Last Dance\" của Deft, cả khán đài bùng nổ, nhưng ở phía bên kia sân khấu, bầu trời như sụp đổ với T1.",
+      "Cậu út Keria gục xuống ghế, khóc nức nở đến mức toàn thân co giật, không thể tự đứng dậy. Gumayusi và Zeus lặng người nhìn màn hình tối đen. Trong khoảnh khắc ấy, Faker — người anh cả đã nếm trải đủ mọi vinh quang lẫn cay đắng — lặng lẽ bước tới, đặt bàn tay ấm áp lên vai từng người em nhỏ, vỗ về và vực họ dậy. Ba chiếc huy chương bạc trong một năm. Nỗi đau ấy đủ sức đánh gục bất kỳ đội tuyển nào, nhưng với ZOFGK, nó lại tôi luyện nên một lớp giáp sắt không gì xuyên thủng.",
+    ],
+  },
+  {
+    index: 5,
+    id: "scene-5",
+    eraTag: "CHƯƠNG V",
+    years: "2023 – 2024",
+    title: "CHƯƠNG V: HAI LẦN CHẠM ĐỈNH THẾ GIỚI – NGÔI SAO THỨ TƯ VÀ THỨ NĂM (2023 – 2024)",
+    unlocksStarsUpTo: 5,
+    bgHex: "#070709",
+    backdropImage: "images/t1/t1-2024-stage.jpg",
+    paragraphs: [
+      "Năm 2023 bắt đầu bằng một kịch bản quen thuộc: T1 lại về nhì ở LCK Mùa Xuân sau trận thua trước Gen.G. Nhưng giông bão thực sự ập đến vào tháng 7 năm 2023.",
+      "Cánh tay phải của Faker — bàn tay đã tạo nên hàng ngàn pha xử lý thần sầu suốt mười năm — gặp chấn thương dây thần kinh nghiêm trọng. Anh buộc phải rời xa sân khấu để điều trị. Ngay lập tức, cỗ máy T1 sụp đổ. Không có người đội trưởng chỉ huy, bốn tài năng trẻ Zeus, Oner, Gumayusi và Keria thi đấu như rắn mất đầu, thua liên tiếp 7 trên 8 trận trước cả những đội tuyển yếu nhất bảng xếp hạng. Giấc mơ Chung Kết Thế Giới bỗng trở nên mong manh hơn bao giờ hết.",
+      "Tháng 8 năm 2023, Faker trở lại khi cánh tay vẫn chưa bình phục hoàn toàn. Chỉ với sự hiện diện của anh, T1 lập tức lột xác, lách qua khe cửa hẹp để giành vé dự Chung Kết Thế Giới 2023 được tổ chức ngay tại quê nhà Seoul, Hàn Quốc.",
+      "Nhưng tại vòng Tứ kết, ba đội tuyển còn lại của Hàn Quốc lần lượt gục ngã. T1 trở thành ngọn cờ cuối cùng của LCK đứng đơn độc giữa vòng vây của bốn gã khổng lồ Trung Quốc (LPL). Và chính trong thế chân tường ấy, bản năng của vương triều đỏ trỗi dậy mãnh liệt nhất.",
+      "Tứ kết, T1 đè bẹp LNG Esports 3-0.",
+      "Bán kết, T1 chạm trán JD Gaming — siêu đội hình đang đứng trước ngưỡng cửa hoàn tất \"Con đường Hoàng kim\" (vô địch mọi giải đấu trong năm) với những siêu sao như Ruler và Knight. Ở ván 3 quyết định, khi JDG chuẩn bị tràn lên kết thúc ván đấu, Faker điều khiển Azir tốc biến vào giữa đội hình địch, hất tung xạ thủ Ruler về phía đồng đội bằng một pha Phân Chia Thiên Hạ hoàn hảo đến mức phi thực tế. JDG tan vỡ. Con đường Hoàng kim của họ bị chính tay Quỷ Vương chặt đứt.",
+      "Ngày 19 tháng 11 năm 2023, tại mái vòm Gocheok Sky Dome, Seoul, T1 nghiền nát Weibo Gaming 3-0. Sau 2.576 ngày chờ đợi kể từ năm 2016, Faker lại nâng cao chiếc cúp Summoner. Không còn những giọt nước mắt bi thương như ở Tổ Chim năm nào, chỉ còn nụ cười rạng rỡ của một vị vua đã chiến thắng thời gian. Ngôi sao thứ tư chính thức tỏa sáng.",
+      "Chưa dừng lại ở đó, năm 2024 tiếp tục viết thêm một chương huyền thoại nữa cho tập thể ZOFGK. Mùa hè năm 2024, T1 trải qua giai đoạn trồi sụt đầy bất ổn, có lúc suýt mất vé dự Chung Kết Thế Giới và chỉ giành được tấm vé hạt giống số 4 cuối cùng của Hàn Quốc sau trận thắng nghẹt thở 3-2 trước KT Rolster ở vòng loại khu vực.",
+      "Nhưng hễ bước chân ra sân chơi thế giới, dòng máu của T1 lại sôi sục. Hành quân tới châu Âu, họ lần lượt vượt qua Top Esports 3-0 ở tứ kết, đánh bại \"khắc tinh\" quốc nội Gen.G 3-1 ở bán kết, và tiến vào trận chung kết tại nhà thi đấu The O2 Arena, London ngày 2 tháng 11 năm 2024 gặp Bilibili Gaming (BLG).",
+      "BLG dồn T1 vào chân tường khi dẫn trước 2-1. Chỉ một ván thua nữa, vương triều sẽ sụp đổ. Và một lần nữa, người đàn ông 28 tuổi mang tên Lee Sang-hyeok lại đứng lên gánh cả thế giới trên vai. Ở ván 4, anh cầm Sylas cướp chiêu cuối của Rakan lao vào mở giao tranh không tưởng để gỡ hòa 2-2. Ở ván 5 sinh tử, anh dùng Galio bay khắp bản đồ, che chắn cho đồng đội trong pha giao tranh cuối cùng ở đường trên trước khi cùng cả đội tiến thẳng vào phá hủy nhà chính của BLG.",
+      "Chiến thắng 3-2 nghẹt thở tại London. Faker giành danh hiệu MVP trận chung kết thứ hai trong sự nghiệp và chiếc cúp vô địch thế giới lần thứ 5. ZOFGK đi vào ngôi đền bất tử với hai chức vô địch thế giới liên tiếp.",
+    ],
+  },
+  {
+    index: 6,
+    id: "scene-6",
+    eraTag: "CHƯƠNG VI",
+    years: "2025",
+    title: "CHƯƠNG VI: CÚ HAT-TRICK LỊCH SỬ – NGAI VÀNG THỨ SÁU TẠI THÀNH ĐÔ (2025)",
+    unlocksStarsUpTo: 6,
+    bgHex: "#070709",
+    backdropImage: "images/t1/t1-dofgk-2025.jpg",
+    paragraphs: [
+      "Mọi người đều nghĩ ZOFGK sẽ mãi mãi bên nhau. Nhưng cuộc sống luôn chứa đựng những ngã rẽ bất ngờ. Cuối năm 2024, thị trường chuyển nhượng bùng nổ với thông tin gây chấn động: người đi đường trên Zeus rời T1 để tìm kiếm thử thách mới.",
+      "Kỷ nguyên ZOFGK khép lại sau ba năm rực rỡ. Để lấp đầy khoảng trống khổng lồ ở đường trên, T1 đưa về Doran — một tuyển thủ dày dạn kinh nghiệm nhưng luôn mang trên mình nỗi ám ảnh về những lần gục ngã tại sân chơi quốc tế. Đội hình mới của T1 năm 2025 mang tên DOFGK: Doran, Oner, Faker, Gumayusi và Keria.",
+      "Năm 2025 là một hành trình đầy thử thách và sóng gió với đội hình mới này. Ban huấn luyện từng thử nghiệm đưa xạ thủ trẻ Smash vào đội hình chính hồi đầu năm khiến nội bộ chịu không ít áp lực từ dư luận. Họ về nhì đầy tiếc nuối tại MSI 2025 sau trận thua 2-3 trước Gen.G, rồi tiếp tục dừng bước ở vị trí thứ 4 tại vòng Playoffs LCK Mùa Hè. Một lần nữa, T1 bước vào Chung Kết Thế Giới 2025 tại Trung Quốc với tư cách hạt giống số 4 đầy khiêm tốn.",
+      "Không nhiều chuyên gia đặt cược vào T1 năm ấy. Họ bảo đội hình này thiếu sự đột biến của Zeus, bảo Doran sẽ không chịu nổi sức ép ở những trận đấu lớn.",
+      "Nhưng họ đã quên mất một điều: khoác lên mình chiếc áo của T1 nghĩa là khoác lên mình ADN của những nhà vô địch.",
+      "Tại giải đấu năm 2025, Doran chơi thứ Liên Minh Huyền Thoại kiên cường và vị tha nhất cuộc đời anh, sẵn sàng hy sinh tài nguyên để làm lá chắn vững chắc cho đồng đội. Ở vòng loại trực tiếp, T1 vượt qua Anyone's Legend trong một trận đấu 5 ván căng thẳng (3-2), rồi đánh bại Top Esports 3-0 đầy thuyết phục.",
+      "Ngày 9 tháng 11 năm 2025, tại nhà thi đấu đa năng Công viên Thể thao Hồ Đông An ở Thành Đô, Trung Quốc, lịch sử chứng kiến một trận chung kết trong mơ: T1 đối đầu KT Rolster. Lần đầu tiên sau hơn một thập kỷ đối đầu tại Hàn Quốc, cuộc \"Đại chiến Viễn thông\" trứ danh được đưa lên sân khấu danh giá nhất hành tinh.",
+      "Năm ván đấu tại Thành Đô là một cuộc rượt đuổi nghẹt thở đến từng nhịp tim. KT Rolster khởi đầu như vũ bão, dồn ép T1 đến nghẹt thở. Nhưng ở những thời khắc quyết định, từng nhát Trừng Phạt chuẩn xác của Oner, những pha mở giao tranh lạnh lùng của Keria và sự điềm tĩnh đến đáng sợ của Faker đã giữ con tàu T1 đứng vững giữa bão tố. Trong ván 5 quyết định, xạ thủ Gumayusi — người từng phải ngồi dự bị hồi đầu năm và luôn phải chiến đấu để chứng minh giá trị bản thân — đã bắn nát đội hình đối phương, mang về chiến thắng 3-2 vỡ òa cho T1.",
+      "Giây phút Gumayusi nâng cao danh hiệu MVP trận chung kết và bật khóc hạnh phúc: \"Cuối cùng tôi cũng đã chứng minh được với chính bản thân mình rằng tôi là xạ thủ giỏi nhất thế giới\", cả thế giới nghiêng mình thán phục.",
+      "T1 giành chiếc cúp vô địch thế giới lần thứ 6 — trở thành tổ chức đầu tiên và duy nhất trong lịch sử Liên Minh Huyền Thoại lập nên cú Three-Peat (vô địch ba năm liên tiếp: 2023, 2024, 2025). Ngôi sao thứ sáu lấp lánh trên ngực áo đỏ, đưa vương triều T1 chạm đến tầm cao mà có lẽ chẳng đội tuyển nào trong tương lai có thể chạm tới.",
+    ],
+  },
+  {
+    index: 7,
+    id: "scene-7",
+    eraTag: "CHƯƠNG VII",
+    years: "2026",
+    title: "CHƯƠNG VII: HOÀNG HÔN Ở NEW YORK VÀ KHÚC VĨ THANH NĂM 2026 (2026)",
+    unlocksStarsUpTo: 6,
+    bgHex: "#240814",
+    backdropImage: "images/t1/oner-2025.jpg",
+    paragraphs: [
+      "Sau đỉnh cao chói lọi của cú hat-trick lịch sử, bánh xe thời gian lại lăn tới năm 2026 với một cuộc chia ly đầy lưu luyến khác. Gumayusi — chàng xạ thủ vừa chạm đỉnh vinh quang tại Thành Đô — quyết định khép lại hành trình của mình tại T1 để mở ra chương mới cho sự nghiệp.",
+      "Để tiếp nối ngọn lửa ấy, T1 chào đón Peyz — tài năng trẻ sáng giá bậc nhất của thế hệ mới — gia nhập đội hình cùng Doran, Oner, Faker và Keria, dưới sự dẫn dắt của ban huấn luyện gồm những huyền thoại cũ của chính nhà T1 là Tom, Easyhoon và Mata.",
+      "Mùa giải 2026 diễn ra trong kỷ nguyên mới của Liên Minh Huyền Thoại với thể thức cấm chọn Fearless Draft đầy khắc nghiệt, đòi hỏi bể tướng khổng lồ và khả năng thích ứng không ngừng. T1 không còn hủy diệt giải quốc nội như những năm tháng thanh xuân, nhưng họ vẫn bền bỉ như một ngọn núi sừng sững. Suốt cả năm 2026, tập thể DOFPK duy trì tỷ lệ thắng ổn định trên 61%, giành ngôi á quân LCK giai đoạn đầu mùa, đứng hạng 3 ở vòng Playoffs mùa hè và tiến tới Chung Kết Thế Giới 2026 tại Bắc Mỹ (Texas và New York) với vị thế của nhà đương kim vô địch ba năm liên tiếp.",
+      "Tháng 11 năm 2026, cả thế giới lại hướng mắt về những bước chạy của T1. Ở vòng Tứ kết, họ đánh bại đại diện mạnh nhất châu Âu là Karmine Corp với tỷ số 3-1, tiếp tục nối dài chuỗi thành tích chưa từng bị loại trước vòng Bán kết trong mọi lần tham dự Chung Kết Thế Giới của Faker.",
+      "Ngày 8 tháng 11 năm 2026, tại vòng Bán kết Chung Kết Thế Giới 2026, T1 tái ngộ Bilibili Gaming (BLG) — đối thủ từng ôm hận trước họ ở trận chung kết London hai năm về trước.",
+      "Lần này, lịch sử không lặp lại phép màu như ở London nữa. Sau ba năm đứng trên đỉnh cao thế giới, gánh nặng của thời gian và sự trỗi dậy mãnh liệt của đối thủ đã chặn bước tiến của đoàn quân áo đỏ. Dù Peyz và Keria thi đấu đầy nỗ lực, dù Faker vẫn tung ra những pha xử lý mẫu mực của một bậc thầy, BLG bản lĩnh và sắc bén hơn trong những pha giao tranh then chốt.",
+      "Tỷ số 1-3 hiện lên trên bảng điện tử. Nhà chính của T1 vỡ tan trong tiếng hò reo của khán giả Bắc Mỹ. Hành trình bảo vệ ngôi vương kéo dài suốt ba năm ròng rã của T1 chính thức khép lại ở vị trí Top 3-4 thế giới.",
+      "Nhưng không có những giọt nước mắt gục ngã như ở Bắc Kinh năm 2017, cũng chẳng có sự nuối tiếc tột cùng như ở San Francisco năm 2022. Khi năm chàng trai T1 đứng dậy khỏi ghế, tháo tai nghe và bước ra giữa sân khấu để cúi chào khán giả, gương mặt họ bình thản đến lạ. Cả nhà thi đấu đứng dậy vỗ tay không ngớt — không phải để tiễn biệt kẻ thất bại, mà để tri ân một vương triều đã sống trọn vẹn đến từng giây phút cuối cùng.",
+    ],
+  },
+  {
+    index: 8,
+    id: "scene-8",
+    eraTag: "LỜI KẾT",
+    years: "2003 — MÃI MÃI",
+    title: "LỜI KẾT: MÀU ĐỎ KHÔNG BAO GIỜ TẮT",
+    unlocksStarsUpTo: 6,
+    bgHex: "#070709",
+    backdropImage: "images/t1/t1-2024-stage.jpg",
+    paragraphs: [
+      "Câu chuyện về T1 từ những ngày đầu sơ khai năm 2003 đến khúc vĩ thanh cuối năm 2026 không đơn thuần là bảng thành tích của một đội tuyển thể thao điện tử. Với 6 chiếc cúp vô địch thế giới, hàng chục danh hiệu quốc nội và quốc tế, cùng những kỷ lục vô tiền khoáng hậu, họ đã biến những con số khô khan thành cảm xúc sống động trong trái tim của hàng triệu con người trên khắp hành tinh.",
+      "Qua hơn hai thập kỷ, những cái tên trên lưng áo đỏ đã thay đổi biết bao lần. Từ BoxeR đến Impact, Bengi, MaRin, Bang, Wolf; từ thế hệ vàng ZOFGK với Zeus, Gumayusi cho đến những người đồng đội mới như Doran và Peyz. Người đến rồi người đi, những triều đại cũ khép lại để mở ra những chương mới.",
+      "Chỉ có một điều chưa từng thay đổi: ở trung tâm của bản đồ, vẫn luôn có một người đội trưởng đeo kính, điềm tĩnh điều khiển nhịp thở của cả trận đấu, và sắc đỏ mang tên T1 vẫn luôn là ngọn hải đăng rực sáng nhất của Liên Minh Huyền Thoại thế giới.",
+      "Vương triều nào rồi cũng có lúc hoàng hôn, nhưng một huyền thoại thực sự thì không bao giờ kết thúc — nó chỉ lặng lẽ chuyển mình để chờ ngày bình minh kế tiếp bừng sáng.",
+    ],
+  },
+];
+
+export const SCENE_FIGURES: Record<
+  number,
+  { code: string; image: string; caption: string }
+> = {
+  0: {
+    code: "FIG. 01",
+    image: "images/t1/boxer-founder.jpg",
+    caption:
+      "Tư liệu 2003: Lim Yo-hwan \"BoxeR\" — Hoàng đế Terran, người đặt viên gạch đầu tiên cho 4Union và SK Telecom T1.",
+  },
+  1: {
+    code: "FIG. 02",
+    image: "images/t1/skt-2013-team.jpg",
+    caption:
+      "Tư liệu 2013: Năm chàng trai SKT T1 K (Impact, Bengi, Faker, Piglet, PoohManDu) trên đỉnh Chung Kết Thế Giới Mùa 3 tại Los Angeles.",
+  },
+  2: {
+    code: "FIG. 03",
+    image: "images/t1/kkoma-2015.jpg",
+    caption:
+      "Tư liệu 2015: HLV trưởng Kim \"kkOma\" Jeong-gyun — kiến trúc sư thiên tài phía sau ba ngôi sao đầu tiên của đế chế đỏ.",
+  },
+  3: {
+    code: "FIG. 04",
+    image: "images/t1/birds-nest-2017.jpg",
+    caption:
+      "Tư liệu 04.11.2017: Sân vận động Tổ Chim (Bắc Kinh) — nơi chứng kiến giọt nước mắt của người anh hùng cô độc.",
+  },
+  4: {
+    code: "FIG. 05",
+    image: "images/t1/zofgk-2022.jpg",
+    caption:
+      "Tư liệu 2022: Năm chàng trai ZOFGK nâng cúp LCK Mùa Xuân bất bại 20-0 trước khi đối mặt thử thách San Francisco.",
+  },
+  5: {
+    code: "FIG. 06",
+    image: "images/t1/t1-2024-stage.jpg",
+    caption:
+      "Tư liệu 2023–2024: Sân khấu Chung Kết Thế Giới rực lửa — nơi tập thể T1 phục sinh để chạm tới ngôi sao thứ tư và thứ năm.",
+  },
+  6: {
+    code: "FIG. 07",
+    image: "images/t1/faker-2025-worlds.jpg",
+    caption:
+      "Tư liệu 09.11.2025: Khoảnh khắc hậu trận Chung kết Worlds 2025 tại Thành Đô — hoàn tất cú Three-Peat lịch sử với ngôi sao thứ sáu.",
+  },
+  7: {
+    code: "FIG. 08",
+    image: "images/t1/oner-2025.jpg",
+    caption:
+      "Tư liệu 2026: Oner cùng thế hệ DOFPK (Doran, Oner, Faker, Peyz, Keria) chiến đấu kiên cường tới Bán kết Worlds Bắc Mỹ.",
+  },
+  8: {
+    code: "FIG. 09",
+    image: "images/t1/t1-worlds-2024-team.jpg",
+    caption:
+      "Tư liệu vương triều đỏ: Từ BoxeR đến các thế hệ kế cận — màu đỏ T1 luôn là ngọn hải đăng của Liên Minh Huyền Thoại thế giới.",
+  },
+};
