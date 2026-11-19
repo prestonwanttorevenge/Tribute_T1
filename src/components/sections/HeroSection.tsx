@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowDownRight, Volume2, VolumeX } from "lucide-react";
 import { AMBIENT_HERO_VIDEO, CHAPTERS } from "@/data/t1EditionData";
 import { useEditionScroll } from "@/components/SmoothScrollProvider";
+import { assetPath } from "@/lib/assetPath";
 import { soundFx } from "@/lib/soundFx";
 
 export function HeroSection() {
@@ -103,7 +104,7 @@ export function HeroSection() {
           src={AMBIENT_HERO_VIDEO}
         />
         <img
-          src="/images/t1/renaissance-canvas.jpg"
+          src={assetPath("/images/t1/renaissance-canvas.jpg")}
           alt=""
           className="absolute inset-0 w-full h-full object-cover opacity-18 mix-blend-luminosity scale-105"
         />
@@ -130,7 +131,7 @@ export function HeroSection() {
       <header className="relative z-20 w-full max-w-[1440px] mx-auto px-5 sm:px-10 lg:px-14 pt-6 pb-5 flex items-center justify-between gap-4 border-b border-[rgba(234,227,210,0.1)]">
         <div className="flex items-center gap-4">
           <img
-            src="/images/t1/t1-logo.svg"
+            src={assetPath("/images/t1/t1-logo.svg")}
             alt="T1 Official Crest"
             className="h-5 w-auto brightness-0 invert opacity-90"
           />
@@ -229,7 +230,7 @@ export function HeroSection() {
             className="hidden sm:block absolute left-0 xl:-left-4 bottom-8 w-36 md:w-44 archival-frame overflow-hidden z-10 -rotate-3"
           >
             <img
-              src="/images/t1/faker-2013.jpg"
+              src={assetPath("/images/t1/faker-2013.jpg")}
               alt="Faker năm 2013 tại Chung kết Thế giới Mùa 3"
               className="w-full aspect-[3/4] object-cover object-top archival-photo"
             />
@@ -244,7 +245,7 @@ export function HeroSection() {
             className="hidden sm:block absolute right-0 xl:-right-4 top-6 w-36 md:w-44 archival-frame overflow-hidden z-10 rotate-3"
           >
             <img
-              src="/images/t1/faker-2025-worlds.jpg"
+              src={assetPath("/images/t1/faker-2025-worlds.jpg")}
               alt="Faker tại Chung kết Worlds 2025 Thành Đô"
               className="w-full aspect-[3/4] object-cover object-top archival-photo"
             />
@@ -260,7 +261,7 @@ export function HeroSection() {
           >
             <div className="relative overflow-hidden">
               <img
-                src="/images/t1/faker-2026.png"
+                src={assetPath("/images/t1/faker-2026.png")}
                 alt="Lee Sang-hyeok (Faker) năm 2026"
                 className="w-full aspect-[3/4] object-cover object-top archival-photo archival-photo-active"
               />
